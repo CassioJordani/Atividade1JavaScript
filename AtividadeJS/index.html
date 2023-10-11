@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercícios em JavaScript</title>
+</head>
+<body>
+    <script>
+        function maiorNumero() {
+            var num1 = parseFloat(prompt("Digite o primeiro número:"));
+            var num2 = parseFloat(prompt("Digite o segundo número:"));
+            var maior = num1 > num2 ? num1 : num2;
+            alert("O maior número é: " + maior);
+        }
+        
+        function menorNumero() {
+            var num1 = parseFloat(prompt("Digite o primeiro número:"));
+            var num2 = parseFloat(prompt("Digite o segundo número:"));
+            var menor = num1 < num2 ? num1 : num2;
+            alert("O menor número é: " + menor);
+        }
+
+        function mensagemNota() {
+            var nota = parseFloat(prompt("Digite a nota:"));
+            if (nota < 6) {
+                alert("Reprovado");
+            } else if (nota < 8) {
+                alert("Aprovado");
+            } else {
+                alert("Aprovado com louvor");
+            }
+        }
+
+        function mediaVetor() {
+            var vetor = [1, 5, 4, 3, 7];
+            var soma = 0;
+            for (var i = 0; i < vetor.length; i++) {
+                soma += vetor[i];
+            }
+            var media = soma / vetor.length;
+            alert("A média do vetor é: " + media);
+        }
+
+        function mensagemVariavel() {
+            var variavel = prompt("Digite uma variável (a ou b):");
+            if (variavel === 'a') {
+                alert("A");
+            } else if (variavel === 'b') {
+                alert("B");
+            } else {
+                alert("C");
+            }
+        }
+
+        function somaMatriz() {
+            var matriz = [[6, 8, 1], [4, 7, 2], [6, 2, 6]];
+            var soma = 0;
+            for (var i = 0; i < matriz.length; i++) {
+                for (var j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                }
+            }
+            alert("A soma dos elementos da matriz é: " + soma);
+        }
+
+        function fatorial() {
+            var numero = parseInt(prompt("Digite um número para calcular o fatorial:"));
+            var resultado = 1;
+            for (var i = 1; i <= numero; i++) {
+                resultado *= i;
+            }
+            alert("O fatorial de " + numero + " é: " + resultado);
+        }
+
+        function menuOpcoes() {
+            var escolha = parseInt(prompt("Escolha uma opção:\n1. Opção 1\n2. Opção 2\n3. Opção 3"));
+            switch (escolha) {
+                case 1:
+                    alert("Opção 1 escolhida");
+                    break;
+                case 2:
+                    alert("Opção 2 escolhida");
+                    break;
+                case 3:
+                    alert("Opção 3 escolhida");
+                    break;
+                default:
+                    alert("Opção inválida");
+            }
+        }
+
+        function maiorNumeroVetor() {
+            var vetor = [7, 2, 1, 2, 3];
+            var maior = Math.max(...vetor);
+            alert("O maior número do vetor é: " + maior);
+        }
+
+        function mediaMatriz() {
+            var matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+            var soma = 0;
+            var totalElementos = 0;
+            for (var i = 0; i < matriz.length; i++) {
+                for (var j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                    totalElementos++;
+                }
+            }
+            var media = soma / totalElementos;
+            alert("A média dos elementos da matriz é: " + media);
+        }
+    </script>
+
+    <button onclick="maiorNumero()">1. Exibir o Maior Número</button><br>
+    <button onclick="menorNumero()">2. Exibir o Menor Número</button><br>
+    <button onclick="mensagemNota()">3. Exibir Mensagem com Base na Nota</button><br>
+    <button onclick="mediaVetor()">4. Calcular Média do Vetor</button><br>
+    <button onclick="mensagemVariavel()">5. Exibir Mensagem com Base na Variável</button><br>
+    <button onclick="somaMatriz()">6. Calcular Soma dos Elementos da Matriz</button><br>
+    <button onclick="fatorial()">7. Calcular Fatorial</button><br>
+    <button onclick="menuOpcoes()">8. Menu de Opções</button><br>
+    <button onclick="maiorNumeroVetor()">9. Exibir o Maior Número do Vetor</button><br>
+    <button onclick="mediaMatriz()">10. Calcular Média dos Elementos da Matriz</button>
+</body>
+</html>
